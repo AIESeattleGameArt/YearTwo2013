@@ -1,0 +1,7 @@
+Class Roadmap:
+
+Unity
+-Mecanim        : http://www.youtube.com/watch?v=Xx21y9eJq1U
+ - Downloadable : http://files.unity3d.com/will/MecanimTute.zip
+
+Assessment And Coursework :  https://docs.google.com/folder/d/0B00Zu3w86Ux5MjJDellrcWNTbUU/edit
