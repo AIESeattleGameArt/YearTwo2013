@@ -1,6 +1,7 @@
 Class Roadmap:
 
 Unity
+01/09/2013
 -Mecanim        : http://www.youtube.com/watch?v=Xx21y9eJq1U
  - Downloadable : http://files.unity3d.com/will/MecanimTute.zip
 
