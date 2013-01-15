@@ -1,8 +1,14 @@
+Assessment And Coursework :  https://docs.google.com/folder/d/0B00Zu3w86Ux5MjJDellrcWNTbUU/edit
+
 Class Roadmap:
 
 Unity
+
 01/09/2013
 -Mecanim        : http://www.youtube.com/watch?v=Xx21y9eJq1U
  - Downloadable : http://files.unity3d.com/will/MecanimTute.zip
 
-Assessment And Coursework :  https://docs.google.com/folder/d/0B00Zu3w86Ux5MjJDellrcWNTbUU/edit
+01/15/2013
+-ShadowGun      : http://blogs.unity3d.com/2012/03/23/shadowgun-optimizing-for-mobile-sample-level/
+-Shaders BRDF   : http://www.youtube.com/watch?v=_Y_0cgWu5bQ
+
