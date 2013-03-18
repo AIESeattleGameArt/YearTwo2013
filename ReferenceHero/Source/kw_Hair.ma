@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: kw_Hair.ma
-//Last modified: Mon, Mar 18, 2013 11:57:24 AM
+//Last modified: Mon, Mar 18, 2013 12:10:14 PM
 //Codeset: 1252
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.33189896571808 18.565542281856867 -11.109877579305437 ;
+	setAttr ".t" -type "double3" -1.3318989657181399 18.565542281856935 -11.109877579305671 ;
 	setAttr ".r" -type "double3" -15.338352729595998 -164.19999999997819 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.72991739653818;
+	setAttr ".coi" 12.729917396538696;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -64,7 +64,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "pCube1";
+createNode transform -n "kw_hair";
+createNode transform -n "pCube1" -p "kw_hair";
 	setAttr ".t" -type "double3" -0.022088302347555544 17.024047263887205 0.48223669620084814 ;
 	setAttr ".s" -type "double3" 1.3850670427968903 1.4191619229688033 1.4431683768456314 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
@@ -79,15 +80,17 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -s 26 ".pt";
 	setAttr ".pt[2]" -type "float3" 0.083344504 -0.19221765 0 ;
 	setAttr ".pt[3]" -type "float3" -0.083344504 -0.19221765 0 ;
-	setAttr ".pt[4:7]" -type "float3" 0.12709169 -0.22539119 0.011640096  
-		-0.12709169 -0.22539119 0.011640096  0 -0.22539119 0.23603174  0 -0.22539119 0.23603174 ;
+	setAttr ".pt[4]" -type "float3" 0.12709169 -0.22539119 0.011640096 ;
+	setAttr ".pt[5]" -type "float3" -0.12709169 -0.22539119 0.011640096 ;
+	setAttr ".pt[6]" -type "float3" 0 -0.22539119 0.23603174 ;
+	setAttr ".pt[7]" -type "float3" 0 -0.22539119 0.23603174 ;
 	setAttr ".pt[9]" -type "float3" -0.050988212 -0.14211035 0 ;
 	setAttr ".pt[10]" -type "float3" 0.050988212 -0.14211035 0 ;
 	setAttr ".pt[13]" -type "float3" -0.050988212 -0.14211035 0 ;
 	setAttr ".pt[14]" -type "float3" 0.050988212 -0.14211035 0 ;
 	setAttr ".pt[16]" -type "float3" -0.086082555 -0.17599775 0 ;
-	setAttr ".pt[19:20]" -type "float3" -0.12709169 0 0.024154248  0.12709169 
-		0 0.024154248 ;
+	setAttr ".pt[19]" -type "float3" -0.12709169 0 0.024154248 ;
+	setAttr ".pt[20]" -type "float3" 0.12709169 0 0.024154248 ;
 	setAttr ".pt[23]" -type "float3" 0.086082555 -0.17599775 0 ;
 	setAttr ".pt[25]" -type "float3" 0.074777775 0 0 ;
 	setAttr ".pt[27]" -type "float3" -0.082840472 0 0 ;
@@ -253,24 +256,22 @@ createNode polySplitRing -n "polySplitRing6";
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 4 ".lnk";
-	setAttr -s 4 ".slnk";
+	setAttr -s 2 ".lnk";
+	setAttr -s 2 ".slnk";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 4 ".st";
+	setAttr -s 2 ".st";
 select -ne :initialShadingGroup;
-	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultShaderList1;
-	setAttr -s 4 ".s";
+	setAttr -s 2 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 7 ".r";
 select -ne :renderGlobalsList1;
 select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "mentalRay";
