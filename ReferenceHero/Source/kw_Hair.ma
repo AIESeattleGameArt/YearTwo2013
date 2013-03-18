@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: kw_Hair.ma
-//Last modified: Mon, Mar 18, 2013 11:39:47 AM
+//Last modified: Mon, Mar 18, 2013 11:57:24 AM
 //Codeset: 1252
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.2751576828026465 17.607102554629758 1.2501825641933451 ;
-	setAttr ".r" -type "double3" -12.338352729586568 -643.39999999993506 6.8621002251242243e-015 ;
+	setAttr ".t" -type "double3" -1.33189896571808 18.565542281856867 -11.109877579305437 ;
+	setAttr ".r" -type "double3" -15.338352729595998 -164.19999999997819 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 8.3198969734827362;
+	setAttr ".fl" 34.999999999999993;
+	setAttr ".coi" 12.72991739653818;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -65,8 +65,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode transform -n "pCube1";
-	setAttr ".t" -type "double3" -0.022088302347555544 17.024047263887205 0.48223669620084819 ;
-	setAttr ".s" -type "double3" 1.3850670427968905 1.4191619229688033 1.4431683768456314 ;
+	setAttr ".t" -type "double3" -0.022088302347555544 17.024047263887205 0.48223669620084814 ;
+	setAttr ".s" -type "double3" 1.3850670427968903 1.4191619229688033 1.4431683768456314 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -76,36 +76,31 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 29 ".pt";
+	setAttr -s 26 ".pt";
 	setAttr ".pt[2]" -type "float3" 0.083344504 -0.19221765 0 ;
 	setAttr ".pt[3]" -type "float3" -0.083344504 -0.19221765 0 ;
-	setAttr ".pt[4]" -type "float3" 0 -0.22539119 0.011640096 ;
-	setAttr ".pt[5]" -type "float3" 0 -0.22539119 0.011640096 ;
-	setAttr ".pt[6]" -type "float3" 0 -0.22539119 0.011640096 ;
-	setAttr ".pt[7]" -type "float3" 0 -0.22539119 0.011640096 ;
+	setAttr ".pt[4:7]" -type "float3" 0.12709169 -0.22539119 0.011640096  
+		-0.12709169 -0.22539119 0.011640096  0 -0.22539119 0.23603174  0 -0.22539119 0.23603174 ;
 	setAttr ".pt[9]" -type "float3" -0.050988212 -0.14211035 0 ;
 	setAttr ".pt[10]" -type "float3" 0.050988212 -0.14211035 0 ;
 	setAttr ".pt[13]" -type "float3" -0.050988212 -0.14211035 0 ;
 	setAttr ".pt[14]" -type "float3" 0.050988212 -0.14211035 0 ;
 	setAttr ".pt[16]" -type "float3" -0.086082555 -0.17599775 0 ;
-	setAttr ".pt[19]" -type "float3" 0 0 0.024154248 ;
-	setAttr ".pt[20]" -type "float3" 0 0 0.024154248 ;
+	setAttr ".pt[19:20]" -type "float3" -0.12709169 0 0.024154248  0.12709169 
+		0 0.024154248 ;
 	setAttr ".pt[23]" -type "float3" 0.086082555 -0.17599775 0 ;
-	setAttr ".pt[25]" -type "float3" 0.17987122 0 0 ;
+	setAttr ".pt[25]" -type "float3" 0.074777775 0 0 ;
 	setAttr ".pt[27]" -type "float3" -0.082840472 0 0 ;
 	setAttr ".pt[28]" -type "float3" 0.082840472 0 0 ;
-	setAttr ".pt[30]" -type "float3" -0.17987122 0 0 ;
+	setAttr ".pt[30]" -type "float3" -0.074777775 0 0 ;
 	setAttr ".pt[32]" -type "float3" 0 -0.20392781 0.13991912 ;
 	setAttr ".pt[35]" -type "float3" 0 -0.078971766 0 ;
 	setAttr ".pt[36]" -type "float3" 0 0 -0.086803488 ;
-	setAttr ".pt[37]" -type "float3" 0 0 -0.17874429 ;
+	setAttr ".pt[37]" -type "float3" 0 0 -0.045110445 ;
 	setAttr ".pt[39]" -type "float3" 0 -0.20392781 0.13991912 ;
 	setAttr ".pt[42]" -type "float3" 0 -0.078971766 0 ;
 	setAttr ".pt[43]" -type "float3" 0 0 -0.086803488 ;
-	setAttr ".pt[44]" -type "float3" 0 0 -0.17874429 ;
-createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 3 ".lnk";
-	setAttr -s 3 ".slnk";
+	setAttr ".pt[44]" -type "float3" 0 0 -0.045110445 ;
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -195,8 +190,8 @@ createNode deleteComponent -n "deleteComponent1";
 createNode polySplitRing -n "polySplitRing1";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 2 "e[5:6]" "e[9:10]";
-	setAttr ".ix" -type "matrix" 1.3850670427968905 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
-		 -0.022088302347555544 17.024047263887205 0.48223669620084819 1;
+	setAttr ".ix" -type "matrix" 1.3850670427968903 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
+		 -0.022088302347555544 17.024047263887205 0.48223669620084814 1;
 	setAttr ".wt" 0.23157663643360138;
 	setAttr ".re" 6;
 	setAttr ".sma" 29.999999999999996;
@@ -205,8 +200,8 @@ createNode polySplitRing -n "polySplitRing1";
 createNode polySplitRing -n "polySplitRing2";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[9:10]" "e[12]" "e[14]";
-	setAttr ".ix" -type "matrix" 1.3850670427968905 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
-		 -0.022088302347555544 17.024047263887205 0.48223669620084819 1;
+	setAttr ".ix" -type "matrix" 1.3850670427968903 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
+		 -0.022088302347555544 17.024047263887205 0.48223669620084814 1;
 	setAttr ".wt" 0.41230097413063049;
 	setAttr ".dr" no;
 	setAttr ".re" 12;
@@ -216,8 +211,8 @@ createNode polySplitRing -n "polySplitRing2";
 createNode polySplitRing -n "polySplitRing3";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 6 "e[3:4]" "e[7:8]" "e[13]" "e[17]" "e[20]" "e[24]";
-	setAttr ".ix" -type "matrix" 1.3850670427968905 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
-		 -0.022088302347555544 17.024047263887205 0.48223669620084819 1;
+	setAttr ".ix" -type "matrix" 1.3850670427968903 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
+		 -0.022088302347555544 17.024047263887205 0.48223669620084814 1;
 	setAttr ".wt" 0.73357659578323364;
 	setAttr ".dr" no;
 	setAttr ".re" 4;
@@ -227,8 +222,8 @@ createNode polySplitRing -n "polySplitRing3";
 createNode polySplitRing -n "polySplitRing4";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 7 "e[3:4]" "e[13]" "e[20]" "e[30]" "e[32]" "e[34]" "e[36]";
-	setAttr ".ix" -type "matrix" 1.3850670427968905 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
-		 -0.022088302347555544 17.024047263887205 0.48223669620084819 1;
+	setAttr ".ix" -type "matrix" 1.3850670427968903 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
+		 -0.022088302347555544 17.024047263887205 0.48223669620084814 1;
 	setAttr ".wt" 0.55241751670837402;
 	setAttr ".dr" no;
 	setAttr ".re" 4;
@@ -238,8 +233,8 @@ createNode polySplitRing -n "polySplitRing4";
 createNode polySplitRing -n "polySplitRing5";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 5 "e[0:2]" "e[15]" "e[22]" "e[33]" "e[48]";
-	setAttr ".ix" -type "matrix" 1.3850670427968905 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
-		 -0.022088302347555544 17.024047263887205 0.48223669620084819 1;
+	setAttr ".ix" -type "matrix" 1.3850670427968903 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
+		 -0.022088302347555544 17.024047263887205 0.48223669620084814 1;
 	setAttr ".wt" 0.65244561433792114;
 	setAttr ".dr" no;
 	setAttr ".re" 0;
@@ -249,42 +244,43 @@ createNode polySplitRing -n "polySplitRing5";
 createNode polySplitRing -n "polySplitRing6";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 5 "e[0:2]" "e[56]" "e[58]" "e[62]" "e[64]";
-	setAttr ".ix" -type "matrix" 1.3850670427968905 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
-		 -0.022088302347555544 17.024047263887205 0.48223669620084819 1;
+	setAttr ".ix" -type "matrix" 1.3850670427968903 0 0 0 0 1.4191619229688033 0 0 0 0 1.4431683768456314 0
+		 -0.022088302347555544 17.024047263887205 0.48223669620084814 1;
 	setAttr ".wt" 0.51500183343887329;
 	setAttr ".dr" no;
 	setAttr ".re" 0;
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
+createNode lightLinker -s -n "lightLinker1";
+	setAttr -s 4 ".lnk";
+	setAttr -s 4 ".slnk";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 2 ".st";
+	setAttr -s 4 ".st";
 select -ne :initialShadingGroup;
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultShaderList1;
-	setAttr -s 2 ".s";
+	setAttr -s 4 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
+	setAttr -s 7 ".r";
 select -ne :renderGlobalsList1;
+select -ne :defaultRenderGlobals;
+	setAttr ".ren" -type "string" "mentalRay";
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "polySplitRing6.out" "pCubeShape1.i";
-relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "polyCube1.out" "deleteComponent1.ig";
@@ -300,6 +296,10 @@ connectAttr "polySplitRing4.out" "polySplitRing5.ip";
 connectAttr "pCubeShape1.wm" "polySplitRing5.mp";
 connectAttr "polySplitRing5.out" "polySplitRing6.ip";
 connectAttr "pCubeShape1.wm" "polySplitRing6.mp";
+relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of kw_Hair.ma
