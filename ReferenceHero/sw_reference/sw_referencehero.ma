@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: sw_referencehero.ma
-//Last modified: Mon, Mar 18, 2013 12:03:44 PM
+//Last modified: Mon, Mar 18, 2013 12:16:53 PM
 //Codeset: 1252
 file -rdi 1 -ns "Hero_Body" -rfn "Hero_BodyRN" "C:/Users/The Sleeve/Documents/GitHub/YearTwo2013/ReferenceHero/Source/Hero_Body.ma";
 file -rdi 1 -ns "ei_helmet" -rfn "ei_helmetRN" "C:/Users/The Sleeve/Documents/GitHub/YearTwo2013/ReferenceHero/Source/ei_helmet.fbx";
@@ -27,8 +27,8 @@ fileInfo "osv" "Microsoft Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.71991953988386292 7.7513059373417015 38.893757911013083 ;
-	setAttr ".r" -type "double3" -8.1383527296103022 0.60000000000216913 -1.8637084469866792e-017 ;
+	setAttr ".t" -type "double3" 13.66920523964788 5.2736295400436131 43.71441583035805 ;
+	setAttr ".r" -type "double3" -14.738352729632316 -336.1999999999581 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
@@ -166,7 +166,7 @@ createNode reference -n "ei_helmetRN";
 		"ei_helmetRN"
 		"ei_helmetRN" 0
 		"ei_helmetRN" 1
-		2 "|ei_helmet:helmet_01" "translate" " -type \"double3\" 0.00777189 16.676035 1.034802";
+		2 "|ei_helmet:helmet_group_01|ei_helmet:helmet_01" "translate" " -type \"double3\" 0.00777189 16.676035 1.034802";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "kw_HairRN";
@@ -196,7 +196,6 @@ lockNode -l 1 ;
 createNode reference -n "sw_bootsRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sw_bootsRN"
-		"sw_bootsRN" 0
 		"sw_bootsRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
