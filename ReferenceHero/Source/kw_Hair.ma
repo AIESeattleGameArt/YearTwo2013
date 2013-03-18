@@ -1,9 +1,7 @@
 //Maya ASCII 2013 scene
 //Name: kw_Hair.ma
-//Last modified: Mon, Mar 18, 2013 11:36:17 AM
+//Last modified: Mon, Mar 18, 2013 11:39:47 AM
 //Codeset: 1252
-file -rdi 1 -ns "Hero_Body" -rfn "Hero_BodyRN1" "C:/Users/Student/Documents/GitHub/YearTwo2013/ReferenceHero/Source/Hero_Body.ma";
-file -r -ns "Hero_Body" -dr 1 -rfn "Hero_BodyRN1" "C:/Users/Student/Documents/GitHub/YearTwo2013/ReferenceHero/Source/Hero_Body.ma";
 requires maya "2013";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
@@ -190,12 +188,6 @@ createNode reference -n "Hero_BodyRN";
 		"Hero_BodyRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "Hero_BodyRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"Hero_BodyRN1"
-		"Hero_BodyRN1" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode polyCube -n "polyCube1";
 	setAttr ".cuv" 4;
 createNode deleteComponent -n "deleteComponent1";
@@ -269,17 +261,16 @@ select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 3 ".st";
+	setAttr -s 2 ".st";
 select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultShaderList1;
-	setAttr -s 3 ".s";
+	setAttr -s 2 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
 select -ne :renderGlobalsList1;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
